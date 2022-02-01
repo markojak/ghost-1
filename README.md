@@ -18,6 +18,7 @@ This example deploys self-hosted version of [Ghost](https://ghost.org/). Interna
 
 ## 📝 Notes
 
+- You'll need to make sure to add `yarn start` to the Deployments -> Settings and look for "Start Commands"
 - Railway's filesystem is ephemeral which is why any changes to the filesystem are not persisted between deploys. This is why, this example uses Cloudinary for storage.
 - The above limitation also affects the way themes work with Ghost, we use the `bin/themes.sh` script to copy over the themes every time you deploy. That way, the theme is always present.
   - To add a theme, first add the package as a dependency to the `package.json` file and then add it to the list of themes in the `bin/themes.sh` file.
